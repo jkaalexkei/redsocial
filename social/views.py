@@ -9,11 +9,11 @@ from django.contrib.auth.decorators import login_required
 
 def feed(request):
     
-    posts = Post.objects.all()
+    posts = Post.objects.all()#aca se hace el llamado a todos los campos de  la tabla
     
-    context = {'posts':posts}
+    context = {'posts':posts}#se crea el contexto
     
-    return render(request,'social/feed.html',context)
+    return render(request,'social/feed.html',context)# renderiza la pagina con los datos respectivos
 
 
 #creacion y validacion del formulario de usuario
